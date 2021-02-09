@@ -1,4 +1,6 @@
 import React from 'react';
+// import ExampleAppImage from '../images/ExampleAppImage';
+import ExampleAppImage from './ExampleAppImage.png';
 
 
 const ProjectTile = (props) => {
@@ -6,28 +8,25 @@ const ProjectTile = (props) => {
     //have project render based on a props object
     //project object format:
     let projectObj = {
-        image: props.image,
-        title: props.title,
-        desc: props.desc,
-        tags: props.tags,
+        title: props.obj.title,
+        desc: props.obj.desc,
+        image: props.obj.image,
+        tags: props.obj.tags,
     };
 
 
         return (
             <div className="projectCont">
-                <div className="projectImage" >Image Here</div>
+                <div className="projectImageCont" ><img className="projectImage" src= {projectObj.image} alt={projectObj.title}/> </div>
                 <div className="projectText">
-                    <div className="projectTitle">Super Fancy React App</div>
-                    <div className="projectDesc">Message board app made with a React frontend, an Express REST API Backend, and Mongo Database. Users can create an account, and then sign in to post messages. User auth is done with JWT and Passport, password hashing is done with bcrypt. Depending on user credentials they can view, post messages, and if they are admins delete messages.</div>
+                    <div className="projectTitle">{projectObj.title}</div>
+                    <div className="projectDesc">{projectObj.desc}</div>
                 </div>
                 <div className="projectTags">
-                    <div className="projectTag">React</div>
-                    <div className="projectTag">HTML</div>
-                    <div className="projectTag">CSS</div>
-                </div>
-
-
-                
+                    {projectObj.tags.map(item=> {
+                        return <div className="projectTag">{item}</div>
+                    })}
+                </div>               
 
             </div>
         )

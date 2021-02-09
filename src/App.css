@@ -4,7 +4,7 @@
 
 .App {
   text-align: center;
-  background-color: ghostwhite;
+  background-color: #D8E7F5;
   height: 100%;
 }
 
@@ -14,7 +14,7 @@
   width: 100vw;
   height: 5vh;
   /* border: 1px solid black; */
-  background-color:lightslategrey;
+  background-color: #0B0C10;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,9 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: black;
+  color: white;
+  margin: 0 2% 0 0;
+  width: 30vw;
 
 }
 
@@ -36,12 +38,13 @@
 }
 
 :hover.headerItem {
-  color: whitesmoke;
+  color: #2E9CCA;
 }
 
 #name {
   font-size: 1.5rem;
   margin: 0 20px;
+  color: #2E9CCA;
 }
 
 /* about component css rules */
@@ -54,6 +57,8 @@
   align-items: flex-start;
   justify-content: space-evenly;
   margin: 2% 0;
+  color: black;
+  background-color: #D8E7F5;
 
 }
 
@@ -63,6 +68,8 @@
   border: 1px solid black;
   margin: 5px;
   grid-row: 1/3;
+  border-radius: 5%;
+  text-align: center;
 
 }
 
@@ -87,6 +94,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  background-color: #D8E7F5;
 
 }
 
@@ -134,25 +143,77 @@ li {
 
 }
 
-/* project page css rules */
+/* multiple projects page css rules */
+
+.projects {
+  height:100vh;
+  background-color: #c1ceda;
+}
+
+#projectsTitle {
+  margin: 0 auto 10px auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 0 0 0;
+}
+
+.projectTilesCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+
+.carousel {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+margin: 20px auto;
+}
+
+.carouselControl {
+  border: 1px solid black;
+  margin: 0 20px;
+  color: black;
+
+}
+
+:hover.carouselControl {
+  background-color:#e9f4ff;
+}
+
+
+/*individual project page css rules */
 
 .projectCont {
   position: relative;
-  margin: 20px auto;
-  height: 400px;
-  width: 350px;
+  margin: 0 auto 20px auto;
+  height: 350px;
+  width: 300px;
   display: grid;
   grid-template-rows: 3fr 2fr auto;
   grid-template-columns: 1fr;
   border: 1px solid black;
+  background-color: #c7d5e2;
+  border-radius: 2%;
+  color: #0B0C10;
 }
 
 .projectCont >* {
   margin: 5px;
 }
 
-.projectImage {
+.projectImageCont {
   border: 1px solid black;
+  width: 90%;
+  height: 90%;
+  justify-self: center;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+
 }
 
 .projectTitle {
@@ -172,21 +233,31 @@ li {
   grid-template-rows: auto;
   justify-content: center;
   align-items: center;
+  color: #66CBFC;
+}
+
+.projectTag {
+  background-color: #0B0C10;
+  margin: 2px;
+  border-radius: 10%;
 }
 
 
 /* contact me page css rules  */
 
 .contactCont {
-  border: 1px solid black;
-  height: 94vh;
+  /* border: 1px solid black; */
+  height: 100vh;
+  background-color: #D8E7F5;
 }
 
 #contactInfo {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   margin: 10px 0;
+  height: 30%;
 }
 
 .icon {
@@ -208,5 +279,7 @@ li {
 }
 
 #contactTitle {
-  margin: 20px auto;
+  margin: 0 auto 20px 0;
+  padding: 20px 0 0 0;
 }
+

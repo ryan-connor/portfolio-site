@@ -1,28 +1,33 @@
 import React from 'react';
+import githubIcon  from './githubIcon.png';
+import gmailIcon from './gmailIcon.png';
+import linkedinIcon from './linkedinIcon.png';
 
 
 const Contact = (props) => {
 
 
         return (
-            <div className="contactCont">
-                <div id="contactTitle">Feel Free to Reach out!</div>
+            <div className="contactCont" id="contactSection">
+            
+                <div id="contactTitle">Please Feel Free to Reach out</div>
                 <div id="contactInfo">
                     <div className="contactItem">
-                    <div className="icon">Img</div>
-                    <div className="contactLink">Email Address@gmail.com</div>
+                    <div className="icon"><img className="iconImage" src={gmailIcon}  alt="Email logo"/></div>
+                    <div className="contactLink">myAddress@gmail.com</div>
                     </div>
 
                     <div className="contactItem">
-                    <div className="icon">Img</div>
-                    <div className="contactLink">Github Link github.com</div>
+                    <div className="icon"><img className="iconImage" src={githubIcon}  alt="Github logo"/></div>
+                    <div className="contactLink">me/url/github.com</div>
                     </div>
 
                     <div className="contactItem">
-                    <div className="icon">Img</div>
-                    <div className="contactLink">Linkedin linkedin.com/234234234</div>
+                    <div className="icon"><img className="iconImage" src={linkedinIcon}  alt="Linkedin logo"/></div>
+                    <div className="contactLink">linkedin.com/234234234</div>
                     </div>
                 </div>
+                
             </div>
         )
     };

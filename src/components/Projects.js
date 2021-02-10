@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ProjectTile from './ProjectTile';
 import ExampleAppImage from './ExampleAppImage.png';
 
@@ -64,33 +64,80 @@ const Projects = (props) => {
             tags: ['JavaScript','HTML','CSS'],
         },
         {
-            title: 'Members Only Message Board',
-            desc: 'Message board app made with a React frontend, an Express REST API Backend, and Mongo Database. Users can create an account, and then sign in to post messages. User auth is done with JWT and Passport, password hashing is done with bcrypt. Depending on user credentials they can view, post messages, and if they are admins delete messages.',
+            title: 'Members Message Board',
+            desc: 'Message board CRUD app made with React frontend, an Express REST API Backend, and MongoDB. Users can create an account, and sign in to post messages. ',
             image: ExampleAppImage,
             tags: ['React', 'Express', 'MongoDB', 'REST API'],
         },
     ];
 
-    //pass indexes to render as props or state changes, so then will rerender when state changes and change displayed tiles
-    let start= 0;
-    let end= 6; //note end not included
-
-    //loop through here and put all into array, then just render the array of components
+    //loop through here and put all into array, then just render the array of components as needed
     let tiles = savedProjects.map( tile=> {
         return <ProjectTile obj={tile}/>
     });
 
-    let tilesToRender = tiles.slice(start,end);
+    let numProjects = savedProjects.length; 
+
+    let numToDisplay = 6;
+    const [start,setStart] = useState(0);
+    const [end, setEnd] = useState(numToDisplay);
+
+
+    //function to cycle tiles forwards
+    const cycleProjects = () => {
+        if (numProjects-1 - end+1 >= numToDisplay){
+            console.log("space");
+            setStart(end);
+            setEnd(end+numToDisplay);
+        } else {
+            console.log("wrap");
+            console.log("new start", end);
+            console.log("new end", numToDisplay - (numProjects -1 -end));
+            setStart(end);
+            setEnd(numToDisplay-1 - (numProjects -1 -end));
+        }
+    };
+
+//function to cycle tiles backwards
+    const cycleProjectsBack = () => {
+        if (start >= numToDisplay){
+            console.log("space");
+            setStart(start-(numToDisplay));
+            setEnd(start);
+        } else {
+            console.log("wrap");
+            console.log("new start", end);
+            console.log("new end", numToDisplay - (numProjects -1 -end));
+            setStart(numProjects+1 - (numToDisplay- start +1));
+            setEnd(start);
+        }
+    };
+
+
+    //function to cycle tiles
+    let cycleTiles = () => {
+        if (start<end) {
+            return tiles.slice(start,end);
+        } else {
+            return [...tiles.slice(start),...tiles.slice(0,end)];
+        }
+    };
+
+
+
+    // let tilesToRender = tiles.slice(start,end);
+    let tilesToRender = cycleTiles();
 
         return (
-            <div className="projects">
+            <div className="projects" id="projectsSection">
                 <div id="projectsTitle" >Projects</div>
                 <div className="projectTilesCont">
                     {tilesToRender}              
                 </div>
                 <div className="carousel">
-                    <div className="carouselControl" id="carouselLeft">Left</div>
-                    <div className="carouselControl" id="carouselRight">Right</div>
+                    <div className="carouselControl" id="carouselLeft" onClick={cycleProjectsBack}>{'<'}</div>
+                    <div>View More Projects</div>
+                    <div className="carouselControl" id="carouselRight"onClick={cycleProjects}>{'>'}</div>
                 </div>
 
             </div>

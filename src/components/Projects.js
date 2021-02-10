@@ -1,6 +1,13 @@
 import React, {useState} from 'react';
 import ProjectTile from './ProjectTile';
 import ExampleAppImage from './ExampleAppImage.png';
+import ticTacToe from './ticTacToe.png';
+import tileGame from './tileGame.png';
+import toDoList from './toDoList.png';
+import weatherApp from './weatherApp.png';
+import shoppingCart from './shoppingCart.png';
+import etchASketch from './etchASketch.png';
+import calculator from './calculator.png';
 
 //might need to import images in
 
@@ -14,60 +21,70 @@ const Projects = (props) => {
             desc: 'Simple MVC app that displays inventory information from a database and populates EJS templates for various routes.',
             image: ExampleAppImage,
             tags: ['Node','Express','MongoDB','EJS'],
+            gitLink: '',
         },
         {
             title: 'To Do List App',
             desc: 'To Do list app that allows users to create tasks with descriptions/due dates, group them under multiple task projects and update/delete them.',
-            image: ExampleAppImage,
+            image: toDoList,
             tags: ['JavaScript','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Mock Shopping Cart',
             desc: 'Mock shopping website using React Router with various page routes and items that can be added to a shopping cart which then displays a page with all items/total cost',
-            image: ExampleAppImage,
+            image: shoppingCart,
             tags: ['React','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Weather App',
             desc: 'Displays weather conditions based on user search criteria using openweather API.',
-            image: ExampleAppImage,
+            image: weatherApp,
             tags: ['JavaScript','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Tile Memory Game',
             desc: 'Tile memory game that displays randomly mixed tiles that change position every time a user clicks and counts a high score.',
-            image: ExampleAppImage,
+            image: tileGame,
             tags: ['React','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Tic Tac Toe',
             desc: 'Tic-Tac-Toe game that allows 2 players to enter their names and then play tic-tac-toe against each other',
-            image: ExampleAppImage,
+            image: ticTacToe,
             tags: ['JavaScript','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Calculator',
             desc: 'Simple calculator with all basic functionality (add,subtract,multiply,divide), decimals, and all clear buttons',
-            image: ExampleAppImage,
+            image: calculator,
             tags: ['JavaScript','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Etch-a-Sketch',
             desc: 'Etch-a-Sketch/drawing type game that allows users to input a grid size and then displays a grid of squares that change colors upon hover and get 10% darker on each color change',
-            image: ExampleAppImage,
+            image: etchASketch,
             tags: ['JavaScript','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'CV Generator',
             desc: 'CV generator app with template sections for each part of a typical resume that can be edited and added to the generated resume, and then updated/deleted',
             image: ExampleAppImage,
             tags: ['JavaScript','HTML','CSS'],
+            gitLink: '',
         },
         {
             title: 'Members Message Board',
             desc: 'Message board CRUD app made with React frontend, an Express REST API Backend, and MongoDB. Users can create an account, and sign in to post messages. ',
             image: ExampleAppImage,
             tags: ['React', 'Express', 'MongoDB', 'REST API'],
+            gitLink: '',
         },
     ];
 
@@ -78,7 +95,7 @@ const Projects = (props) => {
 
     let numProjects = savedProjects.length; 
 
-    let numToDisplay = 8;
+    let numToDisplay = 6;
     const [start,setStart] = useState(0);
     const [end, setEnd] = useState(numToDisplay);
 

@@ -21,8 +21,13 @@ const About = (props) => {
 
                     
                         <div id="bioTitle">Bio:</div> 
-                        <div id="bioCont"><p>Motivated, hard working individual seeking a role in software development. I have a background in mechanical engineering, but I’ve enjoyed many opportunities to apply programming skills in both past roles and personal projects, which is why I would ultimately like to transition to a software oriented role. </p>
-                        <p>I realize my background isn't a traditional computer science background, but I am confident that I can succeed in a development role if given the chance. I have past experience programming and I have been self studying web development in any available spare time. I’ve built a variety of personal projects that can be viewed on my <a>github</a>, and am constantly learning new skills so I can make better apps with greater complexity.</p>
+                        <div id="bioCont"><p>
+                            I am a motivated and hard working individual seeking a role in software development. I live in Salt Lake City, Utah and am open to any local or remote development roles. I have a background in mechanical engineering, but I’ve enjoyed many opportunities to apply programming skills in both past roles and personal projects, which is why I would ultimately like to transition to a software oriented role.</p>
+                        <p>
+                        My background isn't a traditional computer science background, but I am confident that I can succeed in a development role. I have past experience programming and I have been self studying web development in any available spare time. I’ve built a variety of personal projects that can be viewed on below, and am constantly learning new skills so I can make better apps with greater complexity.
+                        </p>
+                        <p>
+                        Please feel free to reach out, my contact info is at the bottom of the page.</p>
 
                         </div>
                   
@@ -30,6 +35,7 @@ const About = (props) => {
                     
                         <div id="edTitle">Education:</div> 
                         <div id="edCont">
+                                
                                 <div>University of California, Los Angeles (UCLA)</div>
                                 <div>BS Mechanical Engineering</div>
                                 <div>Graduated Dec 2018</div>

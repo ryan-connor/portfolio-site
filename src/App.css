@@ -79,7 +79,7 @@ a:hover{
 .aboutContent {
   /* border: 1px solid black; */
   width:70vw;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
@@ -122,7 +122,7 @@ a:hover{
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 8fr 1fr 3fr;
+  grid-template-rows: 1fr 7fr 1fr 3fr;
   text-align: left;
   grid-gap: 5px;
   height: 100%;
@@ -185,6 +185,11 @@ li {
 
 }
 
+#uclaLogo{
+  height: 40px;
+  margin:0;
+}
+
 #skillTitle{
   font-size: 1.5rem;
   font-weight: bold;
@@ -200,20 +205,22 @@ li {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-template-rows: 1fr 1fr;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   justify-items: center;
+  margin: 0 0 10px 0;
 }
 
 #skillCont img {
   height:50px;
-  margin: 0 2px;
+  margin: 0 5px 5px 5px;
 }
 
 #bioTitle {
   font-size: 1.5rem;
   font-weight: bold;
   align-self: center;
+  margin: 5px 0 0 0;
 
 }
 
@@ -222,6 +229,10 @@ li {
   margin: 0 5% 0 0;
   text-indent: 1rem;
 
+}
+
+#bioCont p{
+  margin-top:0;
 }
 
 /* multiple projects page css rules */
@@ -262,7 +273,7 @@ li {
 
 .projectTilesCont {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 
@@ -301,9 +312,9 @@ font-weight: bold;
 
 .projectCont {
   position: relative;
-  margin: 0 auto 20px auto;
-  height: 350px;
-  width: 300px;
+  margin: 0 auto 40px auto;
+  height: 310px;
+  width: 30vw;
   display: grid;
   grid-template-rows: 3fr 2fr auto;
   grid-template-columns: 1fr;
@@ -321,15 +332,19 @@ font-weight: bold;
 
 .projectImageCont {
   /* border: 1px solid black; */
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   justify-self: center;
+  margin: 0;
 }
 
 .projectImage {
-  width: 100%;
+  /* width: 100%; */
   height: auto;
-
+  max-width: 100%;
+  /* height: 170px; */
+  max-height: 160px;
+/* need to work on getting evenly sized square pictures */
 }
 
 .projectTitle {
@@ -345,9 +360,9 @@ font-weight: bold;
 
 .projectTags{
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, auto);
   grid-template-rows: auto;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   /* color: #66CBFC; */
   /* color: ghostwhite; */
@@ -362,7 +377,21 @@ font-weight: bold;
   border-radius: 5%;
   padding: 3px;
   white-space: nowrap;
+  width: fit-content;
 }
+
+/* .tileGitLink {
+justify-self: center;
+align-self: center;
+height: 1.5rem;
+}
+
+.tileGitLink img{
+  background-color: white;
+  height: 100%;
+  justify-self: center;
+  align-self: center;
+} */
 
 
 /* contact me page css rules  */
@@ -389,9 +418,9 @@ font-weight: bold;
 }
 
 .icon {
-  height: 50px;
+  width: 50px;
   /* border: 1px solid black; */
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
 .contactLink {
@@ -409,12 +438,12 @@ font-weight: bold;
 #contactTitle {
   margin: 0 auto 20px 0;
   padding: 20px 0 0 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .iconImage {
-  height: 50px;
+  width: 50px;
 
 }
 

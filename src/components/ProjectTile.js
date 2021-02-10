@@ -1,6 +1,5 @@
 import React from 'react';
-// import ExampleAppImage from '../images/ExampleAppImage';
-import ExampleAppImage from './ExampleAppImage.png';
+import githubIcon from './githubIcon.png';
 
 
 const ProjectTile = (props) => {
@@ -12,6 +11,7 @@ const ProjectTile = (props) => {
         desc: props.obj.desc,
         image: props.obj.image,
         tags: props.obj.tags,
+        gitLink: props.obj.gitLink,
     };
 
 
@@ -26,7 +26,10 @@ const ProjectTile = (props) => {
                     {projectObj.tags.map(item=> {
                         return <div className="projectTag">{item}</div>
                     })}
-                </div>               
+                    
+                </div>        
+                {/* <a className="tileGitLink"><img src={githubIcon}></img></a>        */}
+                
 
             </div>
         )

@@ -1,5 +1,11 @@
 import React from 'react';
 import headshot from './headshot.jpeg';
+import jsLogo from './jsLogo.png';
+import htmlLogo from './htmlLogo.png';
+import cssLogo from './cssLogo.png';
+import nodeLogo from './nodeLogo.png';
+import expressLogo from './expressLogo.png';
+import reactLogo from './reactLogo.png';
 
 const About = (props) => {
 
@@ -30,7 +36,7 @@ const About = (props) => {
                         </div>
                                        
                         <div id="skillTitle">Skills:</div> 
-                        <div id="skillCont">JavaScript, HTML, CSS, React, Node, Express</div>
+                        <div id="skillCont"><img src={jsLogo}></img><img src={htmlLogo}></img><img src={cssLogo}></img><img src={reactLogo}></img ><img src={nodeLogo}></img><img src={expressLogo}></img></div>
                     
                     
                     {/* <li className="aboutTextItem">Education: 

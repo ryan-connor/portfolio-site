@@ -78,7 +78,7 @@ const Projects = (props) => {
 
     let numProjects = savedProjects.length; 
 
-    let numToDisplay = 6;
+    let numToDisplay = 8;
     const [start,setStart] = useState(0);
     const [end, setEnd] = useState(numToDisplay);
 

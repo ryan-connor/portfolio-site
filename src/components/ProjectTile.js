@@ -1,5 +1,5 @@
 import React from 'react';
-import githubIcon from './githubIcon.png';
+import githubIcon from './images/githubIcon.png';
 
 
 const ProjectTile = (props) => {

@@ -185,10 +185,10 @@ li {
 
 }
 
-#uclaLogo{
+/* #uclaLogo{
   height: 40px;
   margin:0;
-}
+} */
 
 #skillTitle{
   font-size: 1.5rem;
@@ -244,7 +244,7 @@ li {
   background-color: #0d1117;
   scroll-margin-top: 7vh;
   color: whitesmoke;
-  background-image: url("./components/random-grey-variations.png");
+  background-image: url("./components/images/random-grey-variations.png");
 }
 
 /* .projects::before{
@@ -398,7 +398,7 @@ height: 1.5rem;
 
 .contactCont {
   /* border: 1px solid black; */
-  height: 93vh;
+  height: 86vh;
   /* background-color: #D8E7F5; */
   background-color: #17242a;
   font-size: 1.5rem;
@@ -446,4 +446,33 @@ height: 1.5rem;
   width: 50px;
 
 }
+
+/* footer rules */
+
+#footer{
+  display: flex;
+  height: 7vh;
+  width: 100%;
+  background-color: #0b0c10;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+
+}
+
+.footerIcon{
+  width: 50px;
+  /* border: 1px solid black; */
+  margin: 0 20px;
+
+}
+
+.footerIconImage {
+  width: 50px;
+  
+}
+
+
+
 

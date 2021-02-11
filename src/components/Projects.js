@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import ProjectTile from './ProjectTile';
-import ExampleAppImage from './ExampleAppImage.png';
-import ticTacToe from './ticTacToe.png';
-import tileGame from './tileGame.png';
-import toDoList from './toDoList.png';
-import weatherApp from './weatherApp.png';
-import shoppingCart from './shoppingCart.png';
-import etchASketch from './etchASketch.png';
-import calculator from './calculator.png';
+import ExampleAppImage from './images/ExampleAppImage.png';
+import ticTacToe from './images/ticTacToe.png';
+import tileGame from './images/tileGame.png';
+import toDoList from './images/toDoList.png';
+import weatherApp from './images/weatherApp.png';
+import shoppingCart from './images/shoppingCart.png';
+import etchASketch from './images/etchASketch.png';
+import calculator from './images/calculator.png';
 
 //might need to import images in
 

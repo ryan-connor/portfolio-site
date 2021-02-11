@@ -1,11 +1,11 @@
 import React from 'react';
-import headshot from './headshot.jpeg';
-import jsLogo from './jsLogo.png';
-import htmlLogo from './htmlLogo.png';
-import cssLogo from './cssLogo.png';
-import nodeLogo from './nodeLogo.png';
-import expressLogo from './expressLogo.png';
-import reactLogo from './reactLogo.png';
+import headshot from './images/headshot.jpeg';
+import jsLogo from './images/jsLogo.png';
+import htmlLogo from './images/htmlLogo.png';
+import cssLogo from './images/cssLogo.png';
+import nodeLogo from './images/nodeLogo.png';
+import expressLogo from './images/expressLogo.png';
+import reactLogo from './images/reactLogo.png';
 
 const About = (props) => {
 

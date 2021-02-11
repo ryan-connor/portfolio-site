@@ -1,7 +1,7 @@
 import React from 'react';
-import githubIcon  from './githubIcon.png';
-import gmailIcon from './gmailIcon.png';
-import linkedinIcon from './linkedinIcon.png';
+import githubIcon  from './images/githubIcon.png';
+import gmailIcon from './images/gmailIcon.png';
+import linkedinIcon from './images/linkedinIcon.png';
 
 
 const Contact = (props) => {

@@ -273,8 +273,13 @@ li {
 
 .projectTilesCont {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+
+
+  grid-template-columns: repeat(auto-fill, minmax(370px,1fr));
   grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
 }
 
 
@@ -314,7 +319,7 @@ font-weight: bold;
   position: relative;
   margin: 0 auto 40px auto;
   height: 310px;
-  width: 30vw;
+  /* width: 30vw; */
   display: grid;
   grid-template-rows: 3fr 2fr auto;
   grid-template-columns: 1fr;
@@ -324,6 +329,11 @@ font-weight: bold;
   /* color: #0B0C10; */
   /* box-shadow: 4px 5px 14px 0px #afafaf; */
   box-shadow: 0px 0px 4px 1px #23363a;
+
+
+
+  width: 350px;
+  justify-self: center;
 }
 
 .projectCont >* {

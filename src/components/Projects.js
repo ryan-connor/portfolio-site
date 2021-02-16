@@ -94,8 +94,10 @@ const Projects = (props) => {
     });
 
     let numProjects = savedProjects.length; 
+    let tileWidth= 390; //tile size to set for resize
+    let initialTiles = Math.floor(window.innerWidth/tileWidth)*2;
 
-    const [numToDisplay, setNumToDisplay]= useState(6); //always sets initial state to 6 tiles
+    const [numToDisplay, setNumToDisplay]= useState(initialTiles); //always sets initial state to 6 tiles
     const [start,setStart] = useState(0);
     const [end, setEnd] = useState(numToDisplay);
 
@@ -104,7 +106,7 @@ const Projects = (props) => {
         function resizeGrid() {
 
         let width = window.innerWidth;
-        let tileWidth= 390; //tile size to set for resize
+        
         let numTiles = Math.floor(width/tileWidth)*2;
         console.log("start:", start);
         console.log("end:", end);

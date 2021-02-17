@@ -113,8 +113,16 @@ const Projects = (props) => {
         console.log("should display:", numTiles);
         
         if (numTiles-numToDisplay !== 0) {
-            setNumToDisplay(numTiles);
-            setEnd(adjustIndex(end+(numTiles-numToDisplay)));
+            if (numTiles>=2) {
+                setNumToDisplay(numTiles);
+                setEnd(adjustIndex(end+(numTiles-numToDisplay)));
+
+            } else {
+                setNumToDisplay(2);
+                //setEnd(adjustIndex(end+(numTiles-numToDisplay)));
+
+            }
+
         }
     }
         window.addEventListener('resize', resizeGrid)

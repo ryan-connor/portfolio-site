@@ -54,13 +54,16 @@ a:hover{
   color: white;
   margin: 0 2% 0 0;
   /* width: 30vw; */
-  font-size: min(2.5vh, 1.5rem);
+   /* font-size: min(2.5vh, 1.5rem);*/
+  font-size: min(5.5vmin, 24px);
+  
 
 }
 
 .headerItem {
   /* border: 1px solid black; */
-  margin: 0 20px;
+  /* margin: 0 20px; */
+  margin: 0 min(20px, 5vw);
   
 
 }
@@ -71,7 +74,8 @@ a:hover{
 }
 
 #name {
-  font-size: min(3.5vh, 2rem);
+  /* font-size: min(3.5vh, 2rem); */
+  font-size: min(5.5vmin, 32px);
   margin: 0 0 0 20px;
   /* color: #2E9CCA; */
   color:#32a1a7
@@ -79,32 +83,43 @@ a:hover{
 
 /* about component css rules */
 
+#contentCont{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D8E7F5;
+  background-color: #17242a;
+  color: whitesmoke;
+  position: relative;
+}
+
 .aboutContent {
   /* border: 1px solid black; */
   width:70vw;
-  height: 70vh;
+  /* height: 70vh; */
+  min-height: 85vh;
   display: flex;
   align-items: flex-start;
-  justify-content: space-evenly;
-  margin: 2% 0;
+  justify-content: center;
+  margin: 7.5vh 0 2% 0;
   /* color: black; */
   color: whitesmoke;
   /* background-color: #c1ceda; */
   border-radius: 5px;
   /* box-shadow: 4px 5px 14px 0px #a9a9a9; */
   box-shadow: 4px 5px 14px 0px #12181d;
-  font-size: min(max(12px, 1.4vw), 19px);
-  
-
+  font-size: min(max(12px, 2.4vw), 19px);
 
 }
 
 #picture {
-  width: 100%;
-  height: 100%;
+  width: 30%;
+  max-width: 250px;
+  /* height: 100%; */
   /* border: 1px solid black; */
-  margin: 5px;
-  grid-row: 1/3;
+  margin: 0 auto;
   border-radius: 5%;
   text-align: center;
   display: flex;
@@ -123,12 +138,13 @@ a:hover{
 
 .aboutTextCont {
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 6fr 1fr 3fr;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  grid-gap: 5px;
-  height: 100%;
+  /* height: 100%; */
+  min-height: 85vh;
+  justify-content: space-between;
+  width: 95%;
 
 }
 
@@ -138,59 +154,49 @@ a:hover{
 
 }
 
-#contentCont{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #D8E7F5;
-  background-color: #17242a;
-  color: whitesmoke;
-  position: relative;
-
-
-}
-
-/* #contentCont::after {
-  background-image: url(./components/Delicate-Arch.jpg);
-  background-size: 100% 100vh;
-  content: "";
-  opacity: 0.5;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
- 
-
-} */
-
-li {
-  list-style: none;
-  padding: 0;
-}
-
 .aboutTitle{
-  font-size: min(max(14px, 1.7vw), 24px);
+  /* font-size: min(max(14px, 1.7vw), 24px); */
+  font-size: min(max(14px, 2.8vw), 24px);
   font-weight: bold;
+}
+
+#bioTitle {
+  text-indent: 0px;
+
+}
+
+#bioCont {
+  line-height: 150%;
+  text-indent: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#bioCont p{
+  margin-top:0;
+}
+
+#bioText{
+
+
 }
 
 #edTitle{
   /* font-size: 1.5rem; */
   /* font-weight: bold; */
-  grid-row: 3/4;
-  grid-column: 1/2;
-  margin: 0 0 0 5%;
-  align-self: center;
+  /* margin: 0 0 0 5%;
+  align-self: center; */
+  text-indent: 0;
 
 }
 
 #edCont{
-  grid-row: 4/5;
-  grid-column: 1/2;
   line-height: 150%;
-  margin: 0 0 0 5%;
+  /* text-indent: 1rem; */
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 0 0 5%; */
 
 }
 
@@ -200,24 +206,25 @@ li {
 } */
 
 #skillTitle{
+  width: 100%;
   /* font-size: 1.5rem;
   font-weight: bold; */
-  grid-column: 2/3;
-  grid-row: 3/4;
-  align-self: center;
+  /* align-self: center; */
 
 }
 
+#skills {
+  margin: 10px 0;
+}
+
 #skillCont{
-  grid-column: 2/3;
-  grid-row: 4/5;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 1fr 1fr;
-  align-items: flex-start;
-  justify-content: center;
-  justify-items: center;
-  margin: 0 0 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr 1fr; */
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px 0 10px 0;
 }
 
 #skillCont img {
@@ -226,24 +233,14 @@ li {
   margin: 0 5px 5px 5px;
 }
 
-#bioTitle {
-  /* font-size: 1.5rem;
-  font-weight: bold; */
-  align-self: center;
-  margin: 5px 0 0 0;
 
-}
 
-#bioCont {
-  line-height: 150%;
-  margin: 0 5% 0 0;
-  text-indent: 1rem;
 
-}
 
-#bioCont p{
-  margin-top:0;
-}
+
+
+
+
 
 /* multiple projects page css rules */
 
@@ -470,6 +467,7 @@ height: 1.5rem;
 .contactLink {
   height: auto;
   width: auto;
+  overflow-wrap: anywhere;
   /* border: 1px solid black; */
 }
 
@@ -504,7 +502,7 @@ height: 1.5rem;
   justify-content: center;
   color: white;
   /* font-size: 1.5rem; */
-  font-size: min(max(16px, 5vw), 26px);
+  font-size: min(max(12px, 5vw), 26px);
 
 }
 
